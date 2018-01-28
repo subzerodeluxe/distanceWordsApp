@@ -23,7 +23,7 @@ export class LoginPage {
    public nav: NavController) {    
   }
  
-
+   // FACEBOOK LOGIN 
   loginWithFacebook() {
     const loadMessage = this.loadCtrl.create({
       content: "Signing you in ..." 
