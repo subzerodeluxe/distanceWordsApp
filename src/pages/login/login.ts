@@ -35,7 +35,7 @@ export class LoginPage {
         this.navCtrl.setRoot('credentials');  
       }, err => {
         loadMessage.dismiss();
-        let message = this.alert.showAlertMessage("Bad connection?", err, "OK");
+        let message = this.alert.showAlertMessage("Something went wrong!", err, "OK");
         message.present(); 
     });
   } // loginWithFacebook

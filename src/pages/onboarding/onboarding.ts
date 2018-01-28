@@ -13,7 +13,7 @@ export class OnboardingPage {
 
   shakeButton: boolean = true; 
 
-  constructor(public navCtrl: NavController, public storage: Storage, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   loadLoginPage() {

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
 import { AlertServiceProvider } from '../../providers/alert-service/alert-service';
 import { UserServiceProvider } from '../../providers/user-service/user-service';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
@@ -19,7 +18,7 @@ export class CheckCredentialsPage implements OnInit {
   userForm: FormGroup;
   birthday: any; 
  
-  constructor(public navCtrl: NavController, public storage: Storage, public user: UserServiceProvider, 
+  constructor(public navCtrl: NavController, public user: UserServiceProvider, 
   public navParams: NavParams, public alert: AlertServiceProvider, public fb: FormBuilder, public auth: AuthServiceProvider) {
     
   }

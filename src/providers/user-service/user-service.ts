@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { AngularFireAuth } from "angularfire2/auth";
-import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable } from "angularfire2/database";
+import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
 import { AlertServiceProvider } from '../alert-service/alert-service';
 import { Profile } from '../../models/profile.interface';
+import { AngularFireObject } from 'angularfire2/database/interfaces';
 
 
 @Injectable()
 export class UserServiceProvider {
-
   user: any; 
-  userProfile: FirebaseObjectObservable<Profile>; 
+  userProfile: AngularFireObject<Profile>; 
   oneSignalUid: string; 
  
   constructor(public afAuth: AngularFireAuth, public alerts: AlertServiceProvider, public db: AngularFireDatabase) { 
@@ -49,17 +49,18 @@ export class UserServiceProvider {
     })
   }  
 
-  getUserProfile(): FirebaseObjectObservable<Profile> {
+  getUserProfile(): AngularFireObject<Profile> {
     let userId = this.afAuth.auth.currentUser?this.afAuth.auth.currentUser.uid:""; 
     return this.userProfile = this.db.object(`/boxes/DA72tCfOH2ZFaCZcVnEPj53cl7JA/users/${userId}`); 
   }
 
   findUserbyName(name): any {
     let users = this.getUsers();
-    return users.map(users => users.filter(user => user.name === name)[0]); 
+    //return users.valueChanges(users => users.filter(user => user.name === name)[0]); 
+    //return users.valueChanges().map(users => users.filter(user => user.name === name)[0]); 
   }
 
-  getUsers(): FirebaseListObservable<Profile[]> {
+  getUsers(): AngularFireList<Profile[]> {
     return this.db.list(`/boxes/DA72tCfOH2ZFaCZcVnEPj53cl7JA/users`);
   }
 }

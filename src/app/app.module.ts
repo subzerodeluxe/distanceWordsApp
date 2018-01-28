@@ -11,17 +11,12 @@ import { Facebook } from "@ionic-native/facebook";
 import { Camera } from '@ionic-native/camera';
 import { Network } from '@ionic-native/network';
 import { Geolocation } from '@ionic-native/geolocation';
+import { Pro } from '@ionic/pro';
 
 // Providers
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { UserServiceProvider } from '../providers/user-service/user-service';
 import { AlertServiceProvider } from '../providers/alert-service/alert-service';
-
-// Pages
-import { DashboardPage } from '../pages/dashboard/dashboard';
-import { LoginPage } from '../pages/login/login';
-import { OnboardingPage } from '../pages/onboarding/onboarding';
-import { CheckCredentialsPage } from '../pages/check-credentials/check-credentials';
 
 // AF2 Modules
 import { AngularFireModule } from 'angularfire2';
@@ -38,13 +33,14 @@ export const firebaseConfig = {
   messagingSenderId: "356270271131"
 };
 
+// Error tracking 
+const IonicPro = Pro.init('64a56ace', {
+  appVersion: "0.0.1"
+});
+
 @NgModule({
   declarations: [
-    DistanceWords,
-    DashboardPage,
-    LoginPage,
-    OnboardingPage,
-    CheckCredentialsPage
+    DistanceWords
   ],
   imports: [
     BrowserModule,
@@ -55,11 +51,7 @@ export const firebaseConfig = {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    DistanceWords,
-    DashboardPage,
-    LoginPage,
-    OnboardingPage,
-    CheckCredentialsPage
+    DistanceWords
   ],
   providers: [
     StatusBar,

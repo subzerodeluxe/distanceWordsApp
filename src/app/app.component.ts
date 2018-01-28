@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, ModalController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { DashboardPage } from '../pages/dashboard/dashboard';
 
 import * as firebase from 'firebase/app'; 
 import { UserServiceProvider } from '../providers/user-service/user-service';
@@ -15,10 +14,13 @@ import { NavController } from 'ionic-angular/navigation/nav-controller';
   templateUrl: 'app.html'
 })
 export class DistanceWords {
-  public firebase : any;
 
+  @ViewChild('nav') navCtrl: NavController;
+  public firebase : any;
+  
+  
   constructor(platform: Platform, statusBar: StatusBar, public user: UserServiceProvider, splashScreen: SplashScreen, public alerts: AlertServiceProvider, 
-    public menuCtrl: MenuController, public navCtrl: NavController, public modalCtrl: ModalController, public afAuth: AngularFireAuth, public auth: AuthServiceProvider) {
+    public menuCtrl: MenuController, public modalCtrl: ModalController, public afAuth: AngularFireAuth, public auth: AuthServiceProvider) {
       
       this.firebase = firebase; 
       firebase.auth().onAuthStateChanged(user => {

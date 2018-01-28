@@ -54,7 +54,7 @@ export class AuthServiceProvider {
   } // loginWithFacebook
 
 
-  logout(): firebase.Promise<void>{
+  logout(): Promise<void>{
     firebase.database().ref('/boxes/DA72tCfOH2ZFaCZcVnEPj53cl7JA/users')
     .child(firebase.auth().currentUser.uid).off();
 
