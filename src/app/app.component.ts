@@ -18,7 +18,6 @@ export class DistanceWords {
   @ViewChild('nav') navCtrl: NavController;
   public firebase : any;
   
-  
   constructor(platform: Platform, statusBar: StatusBar, public user: UserServiceProvider, splashScreen: SplashScreen, public alerts: AlertServiceProvider, 
     public menuCtrl: MenuController, public modalCtrl: ModalController, public afAuth: AngularFireAuth, public auth: AuthServiceProvider) {
       

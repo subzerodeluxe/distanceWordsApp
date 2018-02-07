@@ -18,4 +18,8 @@ export class DashboardPage {
     console.log('ionViewDidLoad DashboardPage');
   }
 
+  return() {
+    this.navCtrl.setRoot('login'); 
+  }
+
 }
