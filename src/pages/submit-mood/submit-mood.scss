@@ -1,0 +1,32 @@
+.ios, .md {
+
+    page-submit-mood {
+ 
+        .scroll-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            //background-color: #6565B0;
+            //background-color: #D99862;
+        }
+ 
+        h4 {
+            text-align: center;
+            font-size: 1.2em;
+            color: #fff;
+        }   
+
+         h5 {
+            text-align: center;
+            font-size: 1em;
+            color: #fff;
+        }   
+ 
+        smile-rate {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+    }
+}

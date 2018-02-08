@@ -22,6 +22,7 @@ import { AlertServiceProvider } from '../providers/alert-service/alert-service';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { MoodModalComponent } from '../components/mood-modal/mood-modal';
 
 // setup Firebase credentials
 export const firebaseConfig = {
@@ -40,7 +41,8 @@ const IonicPro = Pro.init('64a56ace', {
 
 @NgModule({
   declarations: [
-    DistanceWords
+    DistanceWords,
+    MoodModalComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ const IonicPro = Pro.init('64a56ace', {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    DistanceWords
+    DistanceWords,
+    MoodModalComponent
   ],
   providers: [
     StatusBar,

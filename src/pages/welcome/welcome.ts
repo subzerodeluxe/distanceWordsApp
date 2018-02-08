@@ -18,4 +18,8 @@ export class WelcomePage {
     console.log('ionViewDidLoad WelcomePage');
   }
 
+  loadSubmitMood() {
+    this.navCtrl.setRoot('submitMood');
+  }
+
 }

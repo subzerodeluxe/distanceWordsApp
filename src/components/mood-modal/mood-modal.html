@@ -1,0 +1,45 @@
+<ion-content [style.background-color]="moodColor" padding scrollbar-y-auto>
+  
+  <div class="text-box">
+    <h4>{{ welcomeMessage }}</h4>
+    
+    <h5>Your mood is {{ moodRating }}%</h5>
+
+    <h4>{{ closingMessage }}</h4>
+  </div>
+
+  <button *ngIf="showCamera == true" ion-button outline color="colorWhite" (click)="takePicture()">
+  Sure!
+  </button>
+
+  <div class="ask-for-boost">
+    <ion-item *ngIf="shareMood == true">
+        <ion-label>Who would you like to ask?</ion-label>
+        <ion-select [(ngModel)]="shareMoodWith" submitText="Share" cancelText="Nah">
+          <ion-option *ngFor="let person of persons" value="{{person.name}}">{{person.name}}</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <div text-center>
+      <button *ngIf="shareMood == true && shareMoodWith != null" text-center 
+      ion-button outline color="colorWhite" (click)="giveBoost()">
+        Ask {{ shareMoodWith }} for a boost!
+      </button>
+    </div>
+  </div>
+
+
+  <!-- <img *ngIf="moodPicture" [src]="moodPicture | safePipe: 'url'"
+  style="width: 100%" [hidden]="moodPicture === null"> -->
+
+  <!--Gebruiker drukt op Sure, camera opent, nieuwe modal (imageModal) wordt geladen met daarin de foto  --> 
+  
+</ion-content>
+
+<ion-footer>
+  <ion-navbar [style.background-color]="moodColor">
+    <ion-title (click)="closeModal()">
+      <ion-icon name="close"></ion-icon>
+      No thanks</ion-title>
+  </ion-navbar>
+</ion-footer>
