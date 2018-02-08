@@ -1,3 +1,12 @@
-page-welcome {
+.ios, .md {
+    page-welcome {
+        
+        ion-content {
+            background-image: url('../assets/imgs/onboarding_bg.png');
+        }
+        p, h2 {
+            color: #fff; 
+        }
 
+    }
 }

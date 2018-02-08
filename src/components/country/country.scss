@@ -1,36 +1,28 @@
 .ios, .md {
-    page-onboarding {
+    country {
         
-        ion-content {
-            background-image: url('../assets/imgs/onboarding_bg.png');
-        }
         p, h2 {
             color: #fff; 
         }
 
         .details {
-            margin-top: 5vh;  
+            margin-top: 25vh;  
         }
 
-        .title-box {
+        .intro {
             display: block;
         }
 
-        .title-box #bottom {
-            font-weight: 700; 
-            font-size: 3.1rem; 
-        }
-
-        .title-box #top {
+        .intro #bottom {
             font-weight: 300; 
-            font-size: 2.7rem; 
+            font-size: 1.9rem; 
         }
 
-
-        .bottom-title {
-            padding-top: 29vh; 
-            font-size: 1.5rem;  
+        .intro #top {
+            font-weight: 700; 
+            font-size: 2.1rem; 
         }
+
 
         // Animations
         @-webkit-keyframes slideBig {

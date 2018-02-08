@@ -1,0 +1,24 @@
+<div class="details">
+  <div padding-left class="intro">
+    <h2><span id="top">Good to have you on board!</span><br>
+    <span id="bottom">What language would you like to learn?</span></h2>
+  </div>
+
+  <ion-item>
+    <ion-label>Language</ion-label>
+    <ion-select [(ngModel)]="language" (ionChange)="showLanguage(language)">
+      <ion-option value="Indonesian">Indonesian</ion-option>
+      <ion-option value="Dutch">Dutch</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <div *ngIf="language != null">
+    <p text-center>Are you sure you want to start learning</p>
+    <h2 text-center>{{language}}</h2>
+
+    <p text-center (click)="loadDashboard()">Lets start</p>
+  </div> 
+</div>
+
+
