@@ -39,7 +39,7 @@ export class CheckCredentialsPage implements OnInit {
    }
 
   skipPage() {
-    this.navCtrl.setRoot('dashboard'); 
+    this.navCtrl.setRoot('welcome'); 
   }
 
   signOut() {
