@@ -8,7 +8,8 @@ import { SmileRateComponent } from './smile-rate/smile-rate';
     MoodModalComponent,
     SmileRateComponent],
 	imports: [],
-	exports: [CountryComponent,
+	exports: [
+	CountryComponent,
     MoodModalComponent,
     SmileRateComponent]
 })
