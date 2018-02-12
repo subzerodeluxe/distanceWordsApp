@@ -25,6 +25,7 @@
     "@ionic-native/facebook": "^4.5.2",
     "@ionic-native/geolocation": "^4.5.2",
     "@ionic-native/network": "^4.5.2",
+    "@ionic-native/screen-orientation": "^4.5.3",
     "@ionic-native/splash-screen": "4.3.3",
     "@ionic-native/status-bar": "4.3.3",
     "@ionic/app-scripts": "3.1.0",
@@ -35,6 +36,7 @@
     "cordova-plugin-facebook4": "^1.9.1",
     "cordova-plugin-geolocation": "^4.0.1",
     "cordova-plugin-network-information": "^2.0.1",
+    "cordova-plugin-screen-orientation": "^3.0.1",
     "firebase": "^4.9.0",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
@@ -59,7 +61,8 @@
       "cordova-plugin-facebook4": {
         "APP_ID": "1388384194597101",
         "APP_NAME": "DistanceWords"
-      }
+      },
+      "cordova-plugin-screen-orientation": {}
     }
   }
 }
